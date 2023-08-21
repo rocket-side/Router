@@ -15,7 +15,7 @@ public class RouterLocatorConfig {
     private final ProjectProperties projectProperties;
 
     @Bean
-    public RouteLocator customRouteLocater(RouteLocatorBuilder builder) {
+    public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
         return builder.routes()
                 .route("member-api", r -> r.path("/member/**")
                         .uri("http://" + memberProperties.getHost() + ":" + memberProperties.getPort() + "/"))
